@@ -32,6 +32,9 @@
   active-catalog read-only status, staged diff check, and public-data scan passed.
 - GitHub Actions run `33145237613` completed successfully on Ubuntu and Windows
   with Python 3.10 and 3.13; all four jobs passed.
+- The workflow uses `actions/checkout@v7` and `actions/setup-python@v7`, the
+  current stable major releases checked from their official repositories. Final
+  delivery still requires the latest `main` run to pass after this update.
 - The active complete catalog was only inspected and reported Luna v2. The
   release process did not edit that catalog, Codex config, permissions, or app
   processes.
