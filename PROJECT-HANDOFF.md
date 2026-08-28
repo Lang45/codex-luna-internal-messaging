@@ -22,18 +22,23 @@
 - The utility supports `status` and compare-and-swap `enable` commands.
 - The repository includes a minimal fresh-task acceptance prompt and unit tests.
 
-## Remaining release steps
+## Release evidence
 
-1. Run the full unit test suite and compile check.
-2. Run a dry-run against a temporary fixture and a read-only status check against
-   the active complete catalog.
-3. Scan the repository for secrets and local identifiers.
-4. Initialize Git, commit once, create the public GitHub repository, and push.
-5. Read back visibility, default branch, commit, and CI status.
+- Public repository: `https://github.com/Lang45/codex-luna-internal-messaging`.
+- GitHub read-back: `visibility=PUBLIC`, `isPrivate=false`, default branch `main`.
+- Initial implementation commit:
+  `b4af7a783181c9786f83b794adb69d214e65a7af`.
+- Local validation: 7/7 unit tests, Python compile check, pyproject parse,
+  active-catalog read-only status, staged diff check, and public-data scan passed.
+- GitHub Actions run `33145237613` completed successfully on Ubuntu and Windows
+  with Python 3.10 and 3.13; all four jobs passed.
+- The active complete catalog was only inspected and reported Luna v2. The
+  release process did not edit that catalog, Codex config, permissions, or app
+  processes.
 
 ## Boundaries
 
 - `multi_agent_version` is an internal implementation detail and may change.
 - The utility does not promise support for future Codex versions.
-- No release or upload is complete until GitHub visibility and commit are read
-  back from the remote.
+- Future releases are incomplete until GitHub visibility, remote commit, and CI
+  results are read back again.
